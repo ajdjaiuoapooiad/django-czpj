@@ -1,11 +1,24 @@
 from django.shortcuts import render
 
+from core.models import Team
+
 
 def home(request):
-    return render(request,'home.html')
+    teams = Team.objects.all()
+    data = {
+            'teams': teams,
+            
+        }
+    return render(request, 'home.html', data)
+
 
 def about(request):
-    return render(request,'about.html')
+    teams = Team.objects.all()
+    data = {
+            'teams': teams,
+            
+        }
+    return render(request,'about.html',data)
 
 
 def service(request):
