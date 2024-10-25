@@ -78,8 +78,11 @@ WSGI_APPLICATION = 'czpj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'carzone_db',
+        'USER': 'postgres',
+        'PASSWORD': '1278',
+        'HOST': 'localhost',
     }
 }
 
@@ -125,6 +128,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
+
+# Media settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 
