@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     
     # Ajax
     'ckeditor',
-    'multiselectfield',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
