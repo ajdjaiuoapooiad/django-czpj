@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     
     'core',
     'cars',
+    
+    # Ajax
+    'ckeditor',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
