@@ -27,7 +27,7 @@ def home(request):
             'body_style_search': body_style_search,
             
         }
-    return render(request, 'home.html', data)
+    return render(request, 'pages/home.html', data)
 
 
 def about(request):
@@ -37,12 +37,12 @@ def about(request):
             'teams': teams,
             
         }
-    return render(request,'about.html',data)
+    return render(request,'pages/about.html',data)
 
 
 def service(request):
-    return render(request,'service.html')
+    return render(request,'pages/service.html')
 
 
 def contact(request):
-    return render(request,'contact.html')
+    return render(request,'pages/contact.html')
