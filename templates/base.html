@@ -1,16 +1,15 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title></title>
+    <title>Car Zone {% block title %}    {% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
     <!-- External CSS libraries -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %} ">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-submenu.css' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-select.min.css' %}">
@@ -49,14 +48,21 @@
 
 
 
-
 {% block content %}
+
+
 {% endblock %}
 
-<!-- Footer start -->
-{% include 'include/footer.html' %}
-<!-- Footer end -->
+<!-- Full Page Search -->
+<div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="{% url 'search' %}" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" name='keyword' />
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div>
 
+{% include 'include/footer.html' %}
 
 <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>
