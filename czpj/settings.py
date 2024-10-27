@@ -140,6 +140,15 @@ MEDIA_URL = '/media/'
 
 
 
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+SITE_ID = 1
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

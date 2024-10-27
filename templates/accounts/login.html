@@ -30,7 +30,7 @@
                         </a>
                     </div>
                     <h3>Sign into your account</h3>
-
+                    {% include 'include/messages.html' %}
                     <form action="{% url 'login' %}" method="POST">
                       {% csrf_token %}
                         <div class="form-group form-box">
