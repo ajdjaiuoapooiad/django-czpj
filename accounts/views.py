@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 
 from django.shortcuts import redirect, render
 
+from contacts.models import Contact
+
 
 def login(request):
     if request.method == 'POST':
@@ -62,8 +64,15 @@ def register(request):
 
 @login_required(login_url = 'login')
 def dashboard(request):
-  
-    return render(request, 'accounts/dashboard.html')
+    
+    user_inquiry = Contact.objects.order_by('-create_date').filter(user_id=request.user.id)
+    # count = Contact.objects.order_by('-create_date').filter(user_id=request.user.id).count()
+
+    data = {
+        'inquiries': user_inquiry,
+    }
+    
+    return render(request, 'accounts/dashboard.html',data)
 
 
 
