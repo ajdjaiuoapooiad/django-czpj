@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'core',
     'cars',
     'accounts',
+    'contacts',
+    
     
     # Ajax
     'django_ckeditor_5',
