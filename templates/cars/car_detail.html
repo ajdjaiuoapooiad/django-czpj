@@ -31,9 +31,16 @@
         <div class="row">
             <div class="col-lg-8 col-md-12 col-xs-12">
                 <div class="car-details-section">
+
+
+
+
+
                     <!-- Heading start -->
                     <div class="heading-car clearfix">
                       
+
+                        {% include 'include/messages.html' %}
                         <div class="pull-left">
                             <h3>{{single_car.car_title}}</h3>
                             <h6>
@@ -45,6 +52,10 @@
                         </div>
                     </div>
                     <div id="carDetailsSlider" class="carousel car-details-sliders slide mb-40">
+
+
+
+
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
                             <div class="active item carousel-item" data-slide-number="0">
@@ -71,6 +82,11 @@
                             </div>
                             {% endif %}
                         </div>
+
+
+
+
+
                         <!-- main slider carousel nav controls -->
                         <div class="carousel-indicators-section clearfix">
                             <ul class="carousel-indicators car-properties list-inline nav nav-justified">
@@ -227,7 +243,12 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            <form action="" method="POST">
+
+
+
+
+
+                            <form action="{% url 'inquiry' %}" method="POST">
                               {% csrf_token %}
 
                               {% if user.is_authenticated %}
@@ -296,6 +317,9 @@
                                 <hr>
                                 <input type="submit" value="Send" class="btn btn-block btn-danger">
                             </form>
+
+
+
                           </div>
                         </div>
                       </div>
