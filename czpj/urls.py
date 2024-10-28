@@ -26,7 +26,7 @@ urlpatterns = [
     path('',include('core.urls')),
     path('cars/',include('cars.urls')),
     path('accounts/',include('accounts.urls')),
-
+    path('socialaccounts/', include('allauth.urls')),
     
 ]
 
