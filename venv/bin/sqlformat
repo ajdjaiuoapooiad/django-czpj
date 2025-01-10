@@ -1,4 +1,4 @@
-#!/Users/user/Desktop/czpj/venv/bin/python3.12
+#!/Users/user/Desktop/czpj-deploy/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
